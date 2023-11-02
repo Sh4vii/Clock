@@ -1,0 +1,107 @@
+body{
+    background-color: rgb(10, 10, 10);
+    justify-content: center;
+    align-items: center;
+    padding: 0 8%;
+    display: flex;
+}
+.clock{
+    display: flex;
+    width: 20rem;
+    height: 20rem;
+    border: 5px solid rgba(255, 255, 255, 0.062);
+    border-radius: 15rem;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    background-color: black;
+    background-image: url("img.png");
+    background-size: cover;
+    background-position: center;
+}
+.clock-face{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hand{
+    width: 25%;
+    height:6px;
+    border-radius: 4px;
+    background-color: rgb(240, 255, 254);
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+}
+.second-hand{
+    transition: 0.3s ease infinite;
+    background-color: rgb(255, 0, 0);
+    transition-timing-function: cubic-bezier(0.34, 2.2, 0.77, 0.88);;
+}
+.min-hand{
+    width: 35%;
+    left: 15%;
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s ease-in-out;
+}
+.hour-hand{
+    background-color: rgb(255, 255, 255);
+    transition: 1s linear;
+}
+.center-dot{
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    top: 51%;
+    left: 50%;
+    z-index: 10;
+}
+.digital-clock{
+   position: absolute;
+   top: 75%;
+   
+}
+.time{
+    color: white;
+    font-size: 26px;
+    font-family: monospace;
+    font-weight: 400;
+}
+
+@media (max-width: 450px){
+    .clock{
+       
+        width: 13rem;
+        height: 13rem;
+        
+    }
+    .time{
+        color: white;
+        font-size: 22px;
+        font-family: monospace;
+        font-weight: 400;
+    }    
+}@media (max-width: 280px){
+    .clock{
+       
+        width: 9rem;
+        height: 9rem;
+        
+    }
+    .time{
+        color: white;
+        font-size: 20px;
+        font-family: monospace;
+        font-weight: 400;
+    }
+    
+}
