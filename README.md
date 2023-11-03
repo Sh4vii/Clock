@@ -41,20 +41,25 @@ Additionally, this code snippet demonstrates how to synchronize the movement of 
 function setDate(){
 
     const now = new Date();
+    
+    //To Get the position of the second-hand
     const seconds = now.getSeconds();
-    const secondsDegree = Math.round(((seconds / 60) * 360) + 90);
+    const secondsDegree = Math.round(((seconds / 60) * 360) + 90); //add 90 so the position of hands start at 12
+    
     secondHand.style.transform = `rotate(${secondsDegree}deg)`;
+    
+    //To Get the position of the minute-hand
     const mins = now.getMinutes();
     const minsDegree = ((mins / 60) * 360) + 90;
     minHand.style.transform = `rotate(${minsDegree}deg)`;
+    
+    //To Get the position of the hour-hand
     const hours = now.getHours();
     const hoursDegree = ((hours / 12) * 360) + 90;
     hourHand.style.transform = `rotate(${hoursDegree}deg)`;
 
-
+   //This sets the time for the digital clock
     let time = `${hours}:${mins}`;
-    console.log(digitalTime);
-
     digitalTime.innerHTML  = time;
     
 }

@@ -1,5 +1,6 @@
 body{
     background-color: rgb(10, 10, 10);
+    height: 100vh;
     justify-content: center;
     align-items: center;
     padding: 0 8%;
@@ -11,7 +12,7 @@ body{
     height: 20rem;
     border: 5px solid rgba(255, 255, 255, 0.062);
     border-radius: 15rem;
-    margin: 50px auto;
+    margin: 0 auto;
     position: relative;
     padding: 2rem;
     background-color: black;
@@ -41,6 +42,9 @@ body{
     transform: rotate(90deg);
 }
 .second-hand{
+    width: 50%;
+    height: 3px;
+    left: 0;
     transition: 0.3s ease infinite;
     background-color: rgb(255, 0, 0);
     transition-timing-function: cubic-bezier(0.34, 2.2, 0.77, 0.88);;
@@ -56,13 +60,14 @@ body{
     transition: 1s linear;
 }
 .center-dot{
+    position: absolute;
     height: 15px;
     width: 15px;
     border-radius: 15px;
     background-color: white;
     display: flex;
-    top: 51%;
-    left: 50%;
+    top: 47%;
+    left: 47%;
     z-index: 10;
 }
 .digital-clock{
